@@ -491,6 +491,7 @@ img.full-width {
 
 .site-main hr {
   margin: 3rem 0 2rem;
+  border-color: #888888;
 }
 
 .site-main h2 {
@@ -507,6 +508,10 @@ img.full-width {
   width: 100%;
   max-width: 100vw;
   margin-top: 3rem;
+}
+
+.site-main .gallery li {
+  border: solid 1px #333333;
 }
 
 @media screen and (min-width: 480px) {

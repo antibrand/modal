@@ -91,6 +91,7 @@ img {
 
 	hr {
 		margin: 3rem 0 2rem;
+		border-color: $light_gray;
 	}
 
 	h2 {
@@ -105,6 +106,10 @@ img {
 		width: 100%;
 		max-width: 100vw;
 		margin-top: 3rem;
+
+		li {
+			border: solid 1px $dark_gray;
+		}
 
 		@media screen and ( min-width: 480px ) {
 			grid-template-columns: repeat( 2, 1fr );
