@@ -1,4 +1,4 @@
-
+@import '_colors';
 /**
  * Browser reset and starter styles
  */
@@ -176,7 +176,7 @@ hr {
 
 	// One border for single line separator.
 	border: 0;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid $pale_gray;
 }
 
 /// Form elements
@@ -254,7 +254,7 @@ input,
 textarea,
 select,
 button {
-	border: solid 1px #ccc;
+	border: solid 1px $pale_gray;
 }
 
 // Textarea field.
@@ -497,26 +497,26 @@ textarea {
 /// These may be overridden in forms and colors partials.
 ///
 ::-webkit-input-placeholder {
-	color: #555;
+	color: $medium_gray;
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: #555;
+	color: $medium_gray;
 	opacity: 1;
 }
 
 ::-moz-placeholder {
-	color: #555;
+	color: $medium_gray;
 	opacity: 1;
 }
 
 ::-ms-input-placeholder {
-	color: #555;
+	color: $medium_gray;
 	opacity: 1;
 }
 
 ::placeholder {
-	color: #555;
+	color: $medium_gray;
 	opacity: 1;
 }

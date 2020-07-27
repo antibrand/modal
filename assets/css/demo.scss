@@ -9,7 +9,7 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 	font-size: 1.8rem;
 	line-height: 1.5;
-	color: black;
+	color: $text;
 }
 
 .wrap {
@@ -56,7 +56,7 @@ img {
 
 .site-header {
 	padding: 3rem 0;
-	background-color: #ffee00;
+	background-color: $highlight;
 }
 
 .site-title {
@@ -85,6 +85,10 @@ img {
 	h2,
 	p {
 		margin-top: 1em;
+	}
+
+	hr {
+		margin: 3rem 0 2rem;
 	}
 
 	h2 {
@@ -117,6 +121,7 @@ img {
 .site-footer {
 	margin-top: 6rem;
 	padding: 2rem 0;
+	border-bottom: solid 4px $highlight;
 
 	p {
 		small {
