@@ -270,11 +270,11 @@ body.compensate-for-scrollbar {
 }
 
 .app-modal-slide--video .app-modal-content {
-    background: #000;
+    background: $black;
 }
 
 .app-modal-slide--map .app-modal-content {
-    background: #e5e3df;
+    background: $white;
 }
 
 .app-modal-slide--iframe .app-modal-content {
@@ -355,7 +355,7 @@ body.compensate-for-scrollbar {
 
 .app-modal-button[disabled],
 .app-modal-button[disabled]:hover {
-    color: $light_gray;
+    color: $medium_gray;
     cursor: not-allowed;
     outline: none;
 }

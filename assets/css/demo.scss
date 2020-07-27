@@ -30,7 +30,9 @@ div > figure {
 	display: none;
 }
 
-a[data-app-modal] img {
+.zoom,
+a[data-app-modal="image"],
+.gallery a[data-app-modal] {
 	cursor: zoom-in;
 }
 
