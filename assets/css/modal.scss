@@ -1,17 +1,13 @@
 // Color name variables.
 $white: #ffffff;
-$off_white: #eeeeee !default;
-$pale_gray: #cccccc !default;
-$light_gray: #888888 !default;
-$medium_gray: #555555 !default;
-$dark_gray: #333333 !default;
-$near_black: #121212 !default;
+$off_white: #eeeeee;
+$pale_gray: #cccccc;
+$light_gray: #888888;
+$medium_gray: #555555;
+$dark_gray: #333333;
+$near_black: #121212;
 $black: #000000;
-$app_green: #44aa11 !default;
-$app_yellow: #ffee00 !default;
-$app_orange: #ee6600 !default;
-$app_red: #dd0000 !default;
-$app_highlight: $app_yellow;
+$highlight: #ffee00;
 
 /**
  * Element variables
@@ -402,7 +398,7 @@ body.compensate-for-scrollbar {
 }
 
 .app-modal-progress {
-    background: $app_highlight;
+    background: $highlight;
     height: 2px;
     left: 0;
     position: absolute;
@@ -865,7 +861,7 @@ body.compensate-for-scrollbar {
 }
 
 .app-modal-thumbs__list a::before {
-    border: 6px solid $app_yellow;
+    border: 6px solid $highlight;
     bottom: 0;
     content: '';
     left: 0;
