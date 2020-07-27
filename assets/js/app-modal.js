@@ -989,13 +989,13 @@
 						// Disable some modules
 						slideShow  : 0,
 						fullScreen : 0,
-						thumbs      : 0,
-						touch       : 0,
+						thumbs     : 0,
+						touch      : 0,
 
 						// Disable click event handlers
-						clickContent        : false,
-						clickSlide          : false,
-						click_outside        : false,
+						clickContent       : false,
+						clickSlide         : false,
+						click_outside      : false,
 						doubleClickContent : false,
 						doubleClickSlide   : false,
 						doubleClickOutside : false
@@ -1391,16 +1391,16 @@
 				prop,
 				duration,
 				function () {
-				previous.$slide.removeClass(prop).removeClass( 'app-modal-slide--next app-modal-slide--previous' );
+					previous.$slide.removeClass( prop ).removeClass( 'app-modal-slide--next app-modal-slide--previous' );
 				},
 				false
 			);
 			}
 
 			if ( current.isLoaded ) {
-				self.revealContent(current);
+				self.revealContent( current );
 			} else {
-				self.loadSlide(current);
+				self.loadSlide( current );
 			}
 
 			self.preload( 'image' );
@@ -1410,7 +1410,7 @@
 		// These are gallery items  that are actually added to DOM
 		// =======================================================
 
-		createSlide : function (pos) {
+		createSlide : function ( pos ) {
 
 			var self = this,
 			$slide,
@@ -1439,20 +1439,20 @@
 		// x and y values should be relative to the slide
 		// ==============================================
 
-		scaleToActual : function ( x, y, duration)  {
+		scaleToActual : function ( x, y, duration )  {
 
-			var self = this,
-			current = self.current,
-			$content = current.$content,
-			canvasWidth = $.app_modal.getTranslate( current.$slide ).width,
-			canvasHeight = $.app_modal.getTranslate( current.$slide ).height,
-			newImgWidth = current.width,
-			newImgHeight = current.height,
-			imgPos,
-			posX,
-			posY,
-			scaleX,
-			scaleY;
+			var self         = this,
+				current      = self.current,
+				$content     = current.$content,
+				canvasWidth  = $.app_modal.getTranslate( current.$slide ).width,
+				canvasHeight = $.app_modal.getTranslate( current.$slide ).height,
+				newImgWidth  = current.width,
+				newImgHeight = current.height,
+				imgPos,
+				posX,
+				posY,
+				scaleX,
+				scaleY;
 
 			if ( self.isAnimating || self.isMoved() || ! $content || ! ( current.type == 'image' && current.isLoaded && ! current.hasError ) ) {
 				return;
@@ -1462,23 +1462,23 @@
 
 			$.app_modal.stop( $content );
 
-			x = x === undefined ? canvasWidth * 0.5 : x;
+			x = x === undefined ? canvasWidth  * 0.5 : x;
 			y = y === undefined ? canvasHeight * 0.5 : y;
 
 			imgPos = $.app_modal.getTranslate( $content );
 
-			imgPos.top -= $.app_modal.getTranslate(current.$slide).top;
-			imgPos.left -= $.app_modal.getTranslate(current.$slide).left;
+			imgPos.top  -= $.app_modal.getTranslate( current.$slide ).top;
+			imgPos.left -= $.app_modal.getTranslate( current.$slide ).left;
 
 			scaleX = newImgWidth / imgPos.width;
 			scaleY = newImgHeight / imgPos.height;
 
-			// Get center position for original image
-			posX = canvasWidth * 0.5 - newImgWidth * 0.5;
+			// Get center position for original image.
+			posX = canvasWidth  * 0.5 - newImgWidth  * 0.5;
 			posY = canvasHeight * 0.5 - newImgHeight * 0.5;
 
-			// Make sure image does not move away from edges
-			if (newImgWidth > canvasWidth) {
+			// Make sure image does not move away from edges.
+			if ( newImgWidth > canvasWidth ) {
 
 				posX = imgPos.left * scaleX - ( x * scaleX - x );
 
@@ -1519,7 +1519,7 @@
 			}
 			);
 
-			// Stop slideshow
+			// Stop slideshow.
 			if ( self.SlideShow && self.SlideShow.isActive ) {
 				self.SlideShow.stop();
 			}
@@ -1530,10 +1530,10 @@
 
 		scaleToFit : function ( duration ) {
 
-			var self = this,
-			current  = self.current,
-			$content = current.$content,
-			end;
+			var self     = this,
+				current  = self.current,
+				$content = current.$content,
+				end;
 
 			if ( self.isAnimating || self.isMoved() || ! $content || ! ( current.type == 'image' && current.isLoaded && ! current.hasError ) ) {
 				return;
@@ -1865,7 +1865,7 @@
 			pos      = null,
 			rez      = false;
 
-			if ( current.type === "image" && ( current.isComplete || ( nextWidth && nextHeight ) ) && ! current.hasError ) {
+			if ( current.type === 'image' && ( current.isComplete || ( nextWidth && nextHeight ) ) && ! current.hasError ) {
 
 				rez = self.getFitPos( current );
 
@@ -2129,8 +2129,8 @@
 		setBigImage : function ( slide ) {
 
 			var self = this,
-			img  = document.createElement( 'img' ),
-			$img = $( img );
+				img  = document.createElement( 'img' ),
+				$img = $( img );
 
 			slide.$image = $img
 			.one( 'error', function () {
@@ -2140,7 +2140,7 @@
 
 				var sizes;
 
-				if (!slide.$ghost) {
+				if ( ! slide.$ghost ) {
 					self.resolveImageSlideSize( slide, this.naturalWidth, this.naturalHeight );
 
 					self.afterLoad( slide );
@@ -2535,7 +2535,7 @@
 
 		// Prevent caption overlap,
 		// fix css inconsistency across browsers.
-		adjustCaption : function (slide) {
+		adjustCaption : function ( slide ) {
 
 			var self    = this,
 			    current = slide || self.current,
@@ -2554,7 +2554,7 @@
 
 					$clone
 					.children()
-					.eq(0)
+					.eq( 0 )
 					.empty()
 					.html(caption);
 
@@ -5607,7 +5607,7 @@
 
 				that.instance.trigger( 'onThumbsShow' );
 
-				that.focus(0);
+				that.focus( 0 );
 
 			} else if ( that.$grid ) {
 				that.instance.trigger( 'onThumbsHide' );
