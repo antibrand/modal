@@ -51,6 +51,9 @@
 		 */
 		closeExisting : false,
 
+		// Theme for the instance.
+		theme : null,
+
 		// Enable infinite gallery navigation.
 		loop : false,
 
