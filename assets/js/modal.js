@@ -257,6 +257,14 @@
 		// Custom CSS class for layout.
 		baseClass : '',
 
+		/**
+		 * Highlist color
+		 *
+		 * Used for active buttons, active thumbnail, progress bar.
+		 * Accepts a hex code.
+		 */
+		highlightColor : '#ffee00',
+
 		// Base template for layout.
 		baseTemplate :
 			'<div class="app-modal-container" role="dialog" tabindex="-1">' +
