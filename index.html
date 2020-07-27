@@ -34,6 +34,8 @@
 
 			<p>Browse or download the code here: <a href="https://github.com/antibrand/modal">https://github.com/antibrand/modal</a></p>
 
+			<hr />
+
 			<h2>Single Image</h2>
 
 			<div>
@@ -41,9 +43,11 @@
 					<a href="assets/images/tools.jpg" data-app-modal data-caption="Development Tools" title="Open this image">
 						<img src="assets/images/tools.jpg" alt="Development Tools" class="medium" width="480" height="320" data-width="2048" data-height="1365" description="Photo by Tammy Gann on Unsplash (color modified)" />
 					</a>
-					<figcaption>Development Tools</figcaption>
+					<figcaption class="screen-reader-text">Development Tools</figcaption>
 				</figure>
 			</div>
+
+			<hr />
 
 			<h2>Image Gallery</h2>
 
@@ -112,15 +116,23 @@
 
 				<div>
 					<figure>
-						<a href="assets/images/coffee.jpg" data-app-modal="image" data-caption="Generic"><img src="assets/images/coffee.jpg" alt="Coffee" class="small" /></a>
+						<a href="assets/images/bee.jpg" data-app-modal="image" data-caption="Bee"><img src="assets/images/bee.jpg" alt="Bee" class="small" /></a>
 						<figcaption>Click image to open in another modal</figcaption>
 					</figure>
 				</div>
 			</div>
 
+			<hr />
+
+			<h2>AJAX Content</h2>
+
+			<p>Load content from another HTML file in this domain by <a id="ajax" href="ajax.html">clicking here</a>.</p>
+
+			<hr />
+
 			<h2>Iframe Content</h2>
 
-			<p>Load the antibrand website in a modal window by <a href="iframe.html" data-app-modal="iframe">clicking here</a>.</p>
+			<p>Load the antibrand website in a modal window by <a id="iframe" href="https://antibrand.dev/" data-app-modal>clicking here</a>.</p>
 
 		</div>
 	</main>
@@ -135,6 +147,16 @@
 	</footer>
 
 	<script src="assets/js/modal.min.js"></script>
+	<script>
+		jQuery( document ).ready( function($) {
+			$( '#ajax' ).app_modal({
+				'type' : 'ajax'
+			});
+			$( '#iframe' ).app_modal({
+				'type' : 'iframe'
+			});
+		});
+	</script>
 
 </body>
 </html>
