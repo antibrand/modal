@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+
+	<title>modal - a modal popup application for the antibrand system</title>
+
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	<link rel="stylesheet" href="assets/css/reset.min.css">
+	<link rel="stylesheet" href="assets/css/demo.min.css">
+	<link rel="stylesheet" href="assets/css/app-modal.min.css">
+</head>
+<body>
+
+	<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+
+		<div class="wrap">
+
+			<h1 class="site-title">modal</h1>
+
+			<p class="site-description">a modal popup application for the <a href="https://antibrand.dev/" target="_blank" rel="noreferrer noopener">antibrand</a> system.</p>
+
+		</div>
+	</header>
+
+	<main id="main" class="site-main" itemscope itemprop="mainContentOfPage">
+
+		<div class="wrap">
+
+			<p>This modal application is dependent on JavaScript and jQuery. JavaScript must be enabled for the modal windows to work.</p>
+
+			<p>Browse or download the code here: <a href="https://github.com/antibrand/modal">https://github.com/antibrand/modal</a></p>
+
+			<h2>Single Image</h2>
+
+			<div>
+				<figure class="single-modal-image">
+					<a href="assets/images/tools.jpg" data-app-modal data-caption="Development Tools" title="Open this image">
+						<img src="assets/images/tools.jpg" alt="Development Tools" class="medium" width="480" height="320" data-width="2048" data-height="1365" description="Photo by Tammy Gann on Unsplash (color modified)" />
+					</a>
+					<figcaption>Development Tools</figcaption>
+				</figure>
+			</div>
+
+			<h2>Image Gallery</h2>
+
+			<ul id="gallery-demo" class="gallery">
+				<li>
+					<figure>
+						<a href="assets/images/doors.jpg" data-app-modal="gallery-demo" data-caption="Doors">
+							<img src="assets/images/doors.jpg" alt="" />
+						</a>
+						<figcaption class="screen-reader-text">Doors</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<a href="assets/images/bricks.jpg" data-app-modal="gallery-demo" data-caption="Bricks">
+							<img src="assets/images/bricks.jpg" alt="" />
+						</a>
+						<figcaption class="screen-reader-text">Bricks</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<a href="assets/images/chevy.jpg" data-app-modal="gallery-demo" data-caption="Chevy">
+							<img src="assets/images/chevy.jpg" alt="" />
+						</a>
+						<figcaption class="screen-reader-text">Chevy</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<a href="assets/images/bus.jpg" data-app-modal="gallery-demo" data-caption="Bus">
+							<img src="assets/images/bus.jpg" alt="" />
+						</a>
+						<figcaption class="screen-reader-text">Bus</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<a href="assets/images/balls.jpg" data-app-modal="gallery-demo" data-caption="Balls">
+							<img src="assets/images/balls.jpg" alt="" />
+						</a>
+						<figcaption class="screen-reader-text">Balls</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<a href="assets/images/stairs.jpg" data-app-modal="gallery-demo" data-caption="Stairs">
+							<img src="assets/images/stairs.jpg" alt="" />
+						</a>
+						<figcaption class="screen-reader-text">Stairs</figcaption>
+					</figure>
+				</li>
+			</ul>
+
+			<h2>Inline Content</h2>
+
+			<p>On this page is text and an image in a hidden container. It can be displayed in a modal window by <a href="#inline-demo" data-app-modal="inline">clicking here</a>.</p>
+
+			<div id="inline-demo" class="hidden-content">
+
+				<p>This is content that was hidden then exposed by the modal application.</p>
+
+				<h3>How about a heading?</h3>
+
+				<p>More demo content here.</p>
+
+				<div>
+					<figure>
+						<a href="assets/images/coffee.jpg" data-app-modal="image" data-caption="Generic"><img src="assets/images/coffee.jpg" alt="Coffee" class="small" /></a>
+						<figcaption>Click image to open in another modal</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<h2>Iframe Content</h2>
+
+			<p>Load the antibrand website in a modal window by <a href="iframe.html" data-app-modal="iframe">clicking here</a>.</p>
+
+		</div>
+	</main>
+
+	<footer id="colophon" class="site-footer">
+
+		<div class="wrap">
+
+			<p><small>This modal app was inspired by <a href="http://fancyapps.com/fancybox/" target="_blank" rel="noreferrer noopener">fancyBox 3</a> from </a>fancyApps</small></p>
+
+		</div>
+	</footer>
+
+	<script src="assets/js/app-modal.min.js"></script>
+
+</body>
+</html>
